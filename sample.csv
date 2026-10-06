@@ -1,0 +1,17 @@
+case,quantity,price,discount,expected
+typical,10,1000,10,ИТОГО 11250.00
+min_quantity,1,100,0,ИТОГО 125.00
+max_quantity,10000,100,0,ИТОГО 1250000.00
+min_price,1,0.01,0,ИТОГО 0.01
+max_price,1,5000000,0,ИТОГО 6250000.00
+max_discount,10,1000,30,ИТОГО 8750.00
+rounding,3,0.1,0,ИТОГО 0.38
+quantity_zero,0,100,0,ошибка: количество
+quantity_over,10001,100,0,ошибка: количество
+price_zero,1,0,0,ошибка: цена
+price_over,1,5000001,0,ошибка: цена
+discount_negative,1,100,-1,ошибка: скидка
+discount_over,1,100,31,ошибка: скидка
+price_abc,5,abc,5,ошибка: цена должна быть числом
+quantity_fraction,5.5,100,5,ошибка: количество должно быть целым
+empty_price,5,,5,ошибка: цена должна быть числом
